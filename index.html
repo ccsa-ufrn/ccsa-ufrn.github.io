@@ -1,1 +1,77 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CCSA - Assessoria Técnica</title>
+  <!-- Bootstrap stylesheet -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
+  <!-- Google fonts > Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" alt="Logo Assessoria Técnica">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a href="#">Link</a></li> -->
+          <li class="dropdown">
+            <a href="https://ccsa.ufrn.br" target="_blank">Portal CCSA <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- / nav -->
+
+  <div class="container">
+    <section>
+      <div class="page-header">
+        <h1>Projetos <small>da Assessoria Técnica / CCSA</small></h1>
+      </div>
+      <div id="projects-tab">
+        <ul class="nav nav-pills">
+          <li class="active">
+            <a href="#developed-projects" data-toggle="tab">Desenvolvidos</a>
+          </li>
+          <li>
+            <a href="#developing-projects" data-toggle="tab">Desenvolvendo</a>
+          </li>
+        </ul>
+
+        <div class="tab-content clearfix">
+          <div class="tab-pane active" id="developed-projects">
+            <h3>Here goes the developed projects</h3>
+          </div>
+          <div class="tab-pane" id="developing-projects">
+            <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /section projetos -->
+  </div><!-- /.container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    // Working with the project tabs
+    $("#projects-nav-tabs a").click(function (e) {
+
+    });
+  </script>
+</body>
+</html>

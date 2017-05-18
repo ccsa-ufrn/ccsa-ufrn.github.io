@@ -1,0 +1,15 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.navbar-brand img {
+  max-width: 140px;
+  margin-top: -10px;
+}
+#projects-tab .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+#projects-tab .nav-pills > li > a {
+  border-radius: 0;
+}
