@@ -38,9 +38,25 @@
   </nav><!-- / nav -->
 
   <div class="container">
-    <section>
+    <section id="about">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sobre o <a href="https://github.com/ccsa-ufrn" target="_blank">CCSAdev</a></h3>
+          </div>
+          <div class="panel-body" style="text-align:justify;">
+            <p>
+                Partição destinada ao desenvolvimento de soluções em software para o Centro de Ciências Sociais Aplicadas (CCSA)
+                da Universidade Federal do Rio Grande do Norte (UFRN), campus universitário Natal. Os sistemas desenvolvidos
+                são open source, abertos à colaborações.
+                (<a href="https://www.gnu.org/licenses/quick-guide-gplv3.html" target="_blank">Ler sobre
+                <img width="50" src="https://www.gnu.org/graphics/gplv3-127x51.png" alt="GPLv3"/></a>)
+            </p>
+          </div>
+        </div>
+    </section><!-- /section about -->
+    <section id="projects">
       <div class="page-header">
-        <h1>Projetos <small>da Assessoria Técnica / CCSA</small></h1>
+        <h2>Projetos <small>que mantemos no CCSA UFRN</small></h2>
       </div>
       <div id="projects-tab">
         <ul class="nav nav-pills">
@@ -54,26 +70,88 @@
 
         <div class="tab-content clearfix">
           <div class="tab-pane active" id="developed-projects">
-            <h3>Here goes the developed projects</h3>
+                <div class="row">
+                    <div class="col-sm-3 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/img/seminario.png" alt="...">
+                            <div class="caption">
+                                <h3>Seminário CCSA</h3>
+                                <p>Sistema que suporta um evento tradicional do Centro.</p>
+                                <p>
+                                    <span class="badge">code-igniter</span>
+                                    <span class="badge">my-sql</span>
+                                    <span class="badge">php</span>
+                                </p>
+                                <p><a href="https://github.com/ccsa-ufrn/seminario-ccsa-old" class="btn btn-primary" role="button">Repositório</a> <a class="btn btn-default" role="button" disabled>Documentação</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3">
+                        <div class="thumbnail">
+                            <img src="assets/img/srgccsa.png" alt="...">
+                            <div class="caption">
+                                <h3>SRGCCSA</h3>
+                                <p>Sistema de Relatório de Gestão (plugin para Wordpress).</p>
+                                <p>
+                                    <span class="badge">wordpress</span>
+                                    <span class="badge">php</span>
+                                </p>
+                                <p><a href="https://github.com/ccsa-ufrn/srgccsa" class="btn btn-primary" role="button">Repositório</a> <a class="btn btn-default" role="button" disabled>Documentação</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
           </div>
           <div class="tab-pane" id="developing-projects">
-            <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+              <div class="row">
+                  <div class="col-sm-3 col-md-3">
+                      <div class="thumbnail">
+                          <img src="assets/img/manual.png" alt="...">
+                          <div class="caption">
+                              <h3>Manual do Aluno</h3>
+                              <p>Aplicativo mobile destinado aos novos alunos do Centro.</p>
+                              <p>
+                                  <span class="badge">ionic2</span>
+                              </p>
+                              <p><a href="https://github.com/ccsa-ufrn/manual-do-aluno" class="btn btn-primary" role="button">Repositório</a> <a class="btn btn-default" role="button" disabled>Documentação</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
 
         </div>
       </div>
-    </section><!-- /section projetos -->
-  </div><!-- /.container-fluid -->
+    </section><!-- /section projects -->
+    <section id="members">
+        <div class="page-header">
+          <h3>Membros</h3>
+        </div>
+        <div class="row" id="members_board">
+            <div id="members_loading">Loading...</div>
+        </div>
+    </section><!-- /section members -->
+    <section id="contact">
+        <div class="page-header">
+          <h3>Contato</h3>
+          <p>
+              E-mail: suporteccsa@gmail.com
+          </p>
+        </div>
+    </section><!-- /section contact -->
+  </div><!-- /.container -->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap JS -->
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <!-- GitHub API requester -->
+  <script src="assets/js/github.js" async></script>
   <script>
-    // Working with the project tabs
-    $("#projects-nav-tabs a").click(function (e) {
-
-    });
+  $(function() {
+      var members = ["mrmorais", "victorschinaider"];
+      mount_members(members, $("#members_board"));
+  });
   </script>
 </body>
 </html>

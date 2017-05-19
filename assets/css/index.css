@@ -9,6 +9,7 @@ body {
   color : white;
   background-color: #428bca;
   padding : 5px 15px;
+  padding-top: 20px;
 }
 #projects-tab .nav-pills > li > a {
   border-radius: 0;
