@@ -1,16 +1,29 @@
 body {
-	padding-top: 50px;
-	color: #959595;
-	}
+	padding-top: 25px;
+}
+
+.navbar-toggle {
+	color: black;
+}
 	
 h1, h2, h3, h4, h5, h6 {
 	color: black;
-	}
+}
 	
 .feature {
-	background-color: yellowgreen;
-	color: greenyellow;
-	}
+	background-color: #0f2b5b;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+img.sigv-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+/* .feature .container {
+	width: 600px;
+} */
 	
 .article-intro {
     margin-bottom: 25px;
@@ -24,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     
 .footer-blurb-item {
     padding: 30px;
-    }
+}
  
 .small-print {
 	background-color: #fff;

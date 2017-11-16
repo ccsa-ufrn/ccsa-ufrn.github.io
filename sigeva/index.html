@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Sigeva</title>
+    <title>Projeto Sigeva - CCSA</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,38 +27,38 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-light">
         <div class="container">
             <!-- Logo and responsive toggle -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span>Menu</span>
                 </button>
                 <a class="navbar-brand" href="#">
-                	<span class="glyphicon glyphicon-asterisk"></span> 
-                	Sigeva
+                    Sigeva
                 </a>
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="#">Início</a>
                     </li>
-                    <li>
-                        <a href="#">Docs</a>
+                    <li class="disabled">
+                        <a href="#">Licensa</a>
                     </li>
-                    <li>
+                    <li class="disabled">
                         <a href="#">Tutorial</a>
                     </li>
-		    <li>
-                        <a href="#">Github</a>
+		            <li>
+                        <a href="https://github.com/ccsa-ufrn/sigeva/" target="_blank">Github</a>
                     </li>
-		    <li>
-                        <a href="#">v3.0.0</a>
+		            <li class="disabled">
+                        <a href="#">Release</a>
+                    </li>
+                    <li>
+                        <a href="http://ccsa-ufrn.github.io/" target="_blank">CCSA Assessoria Técnica</a>
                     </li>
                 </ul>
             </div>
@@ -68,95 +68,81 @@
     </nav>
 
 	<div class="jumbotron feature">
-		<div class="container">
-			<h1>Sigeva</h1>
-			<p>Open Source Academic Event Management System</p>
+        <div class="container">
+            <img src="img/g4850.png" class="img-responsive sigv-logo"/>
+			<p>Sistema de Gestão de Eventos Acadêmicos</p>
 			<p>
-				<a class="btn btn-default" href="#">Get Started</a>
-				<a class="btn btn-default" href="#">Take the tutorial</a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=ccsa-ufrn&repo=sigeva&type=star&count=true&size=large" frameborder="0" scrolling="0" width="120px" height="30px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=ccsa-ufrn&repo=sigeva&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 			</p>
 		</div>
 	</div>
 
     <!-- Content -->
     <div class="container">
-
-        <!-- Heading -->
+        <!-- Welcome to -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Superior Collaboration
-                    <small>Visualize Quality</small>
-                </h1>
-                <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
+                <h2 class="page-header">Bem vindo ao Projeto Sigeva</h2>
+                <p>
+                    Sigeva é um projeto que está sendo desenvolvido pela Assessoria Técnica do Centro de Ciências Sociais Aplicadas (CCSA) da 
+                    UFRN (Universidade Federal do Rio Grande do Norte). O objetivo deste projeto é criar uma plataforma centralizada de eventos
+                    acadêmicos. A motivação para o Sigeva surgiu da necessidade de reutilização de um sistema, já existente, aplicado nos seminários
+                    de pesquisa do CCSA, um evento tradicional do Centro que ocorre anualmente, geralmente no primeiro semestre.
+                </p>
+                <p>
+                    Em 11 agosto de 2016 deu-se início ao desenvolvimento da plataforma que, atualmente (nov 2017) encontra-se adaptada para, 
+                    principalmente, atender os requisitos do Seminário de CCSA. A filosofia do Sigeva trás ideias que aplicam generalidade ao sistema, 
+                    ou seja, o objetivo é que possam ser criados diferentes tipos de eventos com diferentes peculiaridades. Sendo assim, o Sigeva adota 
+                    um padrão modular: ao ser criado um evento é definido que módulos devem ser acoplados ao evento, de forma que o evento seja totalmente 
+                    customizável. Além disso, também é customizável o sistema de permissões e papéis que existem na plataforma.
+                </p>
+                <p>
+                    Algumas das ferramentas que o Sigeva apresenta são:
+                    <ul>
+                        <li><b>Inscrições</b>: usuários podem se inscrever em um evento mediante uma conta já existente no Sigeva</li>
+                        <li><b>Pagamentp</b>: é possível liberar recursos de evento somente mediante pagamento de taxa de inscrição, caso o evento requeira</li>
+                        <li><b>Submissão de trabalhos</b>: Sigeva suporta envio e avaliações de trabalhos submetidos por inscritos à grupos de trabalhos</li>
+                        <li><b>Submissão de atividades</b>: o evento pode possuir área para submissão de atividades propostas (mesa-redonda, oficina, palestra, etc.)</li>
+                        <li><b>Emissão de certificados</b>: ao final do evento Sigeva emite certificados customizáveis para os participantes</li>
+                    </ul>
+                </p>
+                <p>
+                    Estas são apenas algumas das <i>features</i> que estamos desenvolvendo para o Sigeva. Sigeva é Free e Open-source, você pode instalar em seu trabalho, 
+                    faculdade e para uso comercial, também pode distribuir livremente; Sigeva está sob licensa GNU GPLv3. Se você for desenvolvedor, também pode 
+                    contribuir para o desenvolvimento da plataforma no nosso GitHub. Entre no nosso repositório (link no menu) e veja como entrar na 
+                    nossa lista de discussões e propor melhorias. 
+                </p>
+                <p>Equipe Sigeva. (16 de novembro de 2017)</p>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Feature Row -->
+        <!-- /.row Welcome to -->
+        <!-- Welcome to -->
         <div class="row">
-            <article class="col-md-4 article-intro">
-                <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
-                </a>
-                <h3>
-                    <a href="#">Efficiently Unleash</a>
-                </h3>
-                <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </article>
-            <article class="col-md-4 article-intro">
-                <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
-                </a>
-                <h3>
-                    <a href="#">Completely Synergize</a>
-                </h3>
-                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
-            </article>
-
-            <article class="col-md-4 article-intro">
-                <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
-                </a>
-                <h3>
-                    <a href="#">Dynamically Procrastinate</a>
-                </h3>
-                <p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
-            </article>
-        </div>
-        <!-- /.row -->
-
+                <div class="col-lg-12">
+                    <h2 class="page-header">Colaboradores</h2>
+                    <p>Os colaboradores de desenvolvimento do projeto Sigeva são (ou foram) bolsistas da Assessoria Técnica do CCSA.</p>
+                    <p>
+                        <ul>
+                            <li><a href="https://github.com/victorschinaider" target="_blank">Victor Schinaider <span class="badge">ex-colaborador</span></a></li>
+                            <li><a href="https://github.com/mrmorais" target="_blank">Maradona Morais</a></li>
+                            <li><a href="https://github.com/thaydds" target="_blank">Thayrone Dayvid</a></li>
+                        </ul>
+                    </p>
+                    <p>Marconi Macedo é o responsável pelo gerenciamento do projeto Sigeva</p>
+                    <p>Para qualquer informação entre em contato via assessoriatecnica@ccsa.ufrn.br</p>
+                </div>
+            </div>
+            <!-- /.row Welcome to -->
     </div>
     <!-- /.container -->
 	
 	<footer>
-		<div class="footer-blurb">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 footer-blurb-item">
-						<h3><span class="glyphicon glyphicon-fire"></span> Dynamically Procrastinate</h3>
-						<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-						<p><a class="btn btn-default" href="#">Procrastinate</a></p>
-					</div>
-					<div class="col-sm-4 footer-blurb-item">
-						<h3><span class="glyphicon glyphicon-cloud-upload"></span> Efficiently Unleash</h3>
-						<p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. </p>
-						<p><a class="btn btn-default" href="#">Unleash</a></p>
-					</div>
-					<div class="col-sm-4 footer-blurb-item">
-						<h3><span class="glyphicon glyphicon-leaf"></span> Completely Synergize</h3>
-						<p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
-						<p><a class="btn btn-default" href="#">Synergize</a></p>
-					</div>
-
-				</div>
-				<!-- /.row -->	
-			</div>
-        </div>
+		
         
         <div class="small-print">
         	<div class="container">
-        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
-        		<p>Copyright &copy; Example.com 2015 </p>
+        		<p>Copyright &copy; Sigeva 2017 </p>
         	</div>
         </div>
 	</footer>
