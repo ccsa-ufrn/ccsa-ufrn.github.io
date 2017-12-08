@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{hyperref}
+
+\title{Documentação de serviços do CCSA}
+\author{
+        Maradona Morais\\\\
+                Assessoria Técnica do CCSA\\
+        Universidade Federal do Rio Grande do Norte (UFRN)\\
+        \underline{Natal}
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Documenta todos os serviços mantidos pela a Assessoria Técnica do CCSA com descrições detalhadas de funcionamento, tecnologias e formas de manutenção \ldots
+\end{abstract}
+\newpage
+\section{Introdução aos servidores}
+A Assessoria Técnica do CCSA coordena a utilização de dois servidores cedidos pela Superintendencia de Informática da UFRN (SINFO). O primeiro servidor (chamado de \textbf{SOL}) possui a finalidade principal de prover serviços de bancos de dados, mas alguns serviços web também estão rodando neste servidor. O outro servidor (chamado neste arquivo de \textbf{Servidor de Aplicações}) é destinado exclusivamente para aplicações web.
+
+O acesso a qualquer servidor administrado pelo CCSA só pode ser feito através da rede interna da UFRN. Os servidores possuem seus endereços de acesso interno (SOL: 10.3.226.142 e Aplicações: 10.3.225.16) e também possuem seus endereços externos atribuídos pela SINFO. Para acessar o servidor é utilizado os protocolos SFTP para transferência de arquivos e também SSH para acesso via terminal (qualquer informação de acesso, como usuários e senhas, não será informada neste arquivo). 
+
+\subsection{Servidor SOL}
+\subsubsection{Serviços do SOL}
+\textbf{\href{https://www.mysql.com/}{MySQL}}\\
+É um serviço de banco de dados relacional utilizado em diversos projetos do CCSA (temos 29 bancos de dados no MySQL). Ele é executado na porta padrão 3306 e contém alguns usuários para acesso por sistemas. Ele possui dois principais usuários que contêm permissões em todos bancos de dados, não é recomendado utilizar estes usuários para nenhuma aplicação (por fatores de segurança), mas existem vários sistemas legados no CCSA que utilizam estes usuários. Caso esteja desenvolvendo uma nova aplicação recomendo a criação de um usuário no banco de dados para esta aplicação que possui acesso apenas ao banco de dados que vai utilizar.\\
+
+\textbf{\href{http://mongodb.org/}{MongoDB}}\\
+Serviço de banco de dados não relacional, foi instalado recentemente no SOL (por Maradona em dezembro de 2017), e já adota as medidas de segurança relatadas no subtópico anterior: ele tem um usuário administrador mas todos as aplicações que fazem uso deste banco (2 em dezembro de 2017) possuem um usuário próprio com acesso apenas ao seu próprio banco de dados.\\
+
+\textbf{\href{https://nginx.org/en/}{Nginx}}\\
+Entre Apache e Nginx o CCSA opta pela utilização do Nginx em todos os servidores, como servidor HTTP, HTTPS e realização de proxy reverso para alguns serviços.\\
+
+\textbf{\href{http://ojs.ccsa.ufrn.br/}{OJS}}\\
+OJS é uma plataforma de jornais eletrônicos utilizada por revistas do CCSA (5 revistas no total), a disponibilidade deste sistema é fundamental pois as revistas são constantemente avaliadas por instituições como a CAPES. OJS é distribuído pela PKP e eles possuem um \href{https://forum.pkp.sfu.ca/}{fórum} onde eles dão suporte ao OJS e outras ferramentas, além disso OJS é open-source, o CCSA já fez \href{https://github.com/pkp/pkp-lib/issues?q=author:mrmorais}{contribuições} com o projeto OJS e é uma prática recomendada já que fazemos uso da ferramenta.\\
+O OJS é desenvolvido em PHP 5.6, portanto o servidor SOL está configurado com o pacote php-5fpm. O OJS possui uma configuração que determina um local para armazenamento de arquivos subtidos (uploads), no servidor sol estes arquivos estão no diretório \underline{ojs\_files} na home do usuário \underline{sol}.\\
+
+\subsubsection{Configuração de domínios do SOL}
+\textbf{\href{http://ojs.ccsa.ufrn.br/}{ojs.ccsa.ufrn.br}}\\
+Este endereço é respondido atendido pelo servidor SOL.
+
+\subsection{Servidor de Aplicações}
+\subsection{Domínios do Aplicações}
+
+
+\end{document}
